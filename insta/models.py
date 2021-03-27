@@ -74,7 +74,7 @@ class Image(models.Model):
 class Comments(models.Model):
     comment=models.TextField(max_length=50)
     user=models.ForeignKey(User,on_delete=models.CASCADE)
-    image=models.ForeignKey(Image,blank=True)
+    image=models.ForeignKey(Image,blank=True, null=True, on_delete = models.CASCADE)
     def __str__(self):
         return self.comment
     
