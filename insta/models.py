@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from tinymce.models import HTMLField
+import datetime as dt
 
 # Create your models here.
 class Profile(models.Model):
@@ -38,8 +40,8 @@ class Image(models.Model):
       name = models.CharField(max_length =30)
       image_caption = HTMLField()
       post_date = models.DateTimeField(auto_now_add=True)
-      user = models.ForeignKey(User, blank=True,on_delete=models.CASCADE)
-      profile_details=models.ForeignKey(Profile)
+      user = models.ForeignKey(User, blank=True, on_delete = models.CASCADE)
+      profile_details=models.ForeignKey(Profile,blank=True,on_delete = models.CASCADE)
       
 
       def __str__(self):
