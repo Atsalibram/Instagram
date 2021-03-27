@@ -81,8 +81,9 @@ WSGI_APPLICATION = 'gram.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'instagram',
+        'NAME': 'instagram',
         'USER':'moringaaccess',
+        'password':'Access',
     }
 }
 
