@@ -89,3 +89,4 @@ class Comments(models.Model):
     def get_image_comments(cls, id):
         comments = Comment.objects.filter(image__pk=id)
         return comments
+
