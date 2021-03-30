@@ -67,7 +67,7 @@ class Image(models.Model):
     
       @classmethod
       def profile_images(cls, profile):
-          images = Image.objects.filter(image__pk = User)
+          images = Image.objects.filter(image_id = User)
           return images
 
 
@@ -87,6 +87,6 @@ class Comments(models.Model):
 
     @classmethod
     def get_image_comments(cls, id):
-        comments = Comment.objects.filter(image__pk=id)
+        comments = Comment.objects.filter(image_id=id)
         return comments
 
